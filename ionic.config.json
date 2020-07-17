@@ -1,0 +1,7 @@
+{
+  "name": "quinzeApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
