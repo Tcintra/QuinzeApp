@@ -1,0 +1,139 @@
+.events-wrapper {
+  color: black;
+  background-color: white; 
+  padding-left: 0; 
+  padding-right: 0;
+}
+
+.event-actions {
+  padding: 6px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-card {
+  background-color: white;
+  color: black;
+}
+
+.event-image-container { 
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.countdown-time {
+  width: 100% !important;
+}
+
+.countdown-label {
+  font-size: 10px; 
+  text-align: center;
+}
+
+.countdown-elem {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.pfp  {      
+  width: 40px !important;
+  height: 40px !important;
+  margin: auto;
+}
+
+.profile-name-container {
+  margin: auto !important;
+}
+
+.popover-menu-container {
+  text-align: right;
+}
+
+.pfp-container {
+  padding-bottom: 0;
+}
+
+.profile-name {
+  margin: auto !important;
+}
+
+.event-action-button {
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 0;
+  --padding-end: 0;
+  --padding-start: 0;
+}
+
+.lock {
+  font-size: 15px;
+}
+
+ion-card-title {
+  font-size: 20px;
+}
+
+.event-action-icon {
+  font-size: 24px;
+  color: white !important;
+}
+
+.event-action-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: white !important;
+}
+
+.rsvp-button {
+  font-size: 14px;
+  --border-radius: 3px;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2% 0 0;
+}
+
+.event-buttons {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 2%;
+  right: 0;
+}
+
+ion-title {
+  font-size: 30px;
+  display: flex!important;
+  align-content: center!important;
+  align-items: center!important;
+}
+
+ion-card-subtitle {
+  color: red !important;
+}
+
+.event-details {
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+ion-card, ion-card-header, ion-card-content {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.event-image {
+  width: 100% !important;
+  height: auto !important;
+}
+  

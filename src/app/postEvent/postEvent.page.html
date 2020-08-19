@@ -1,0 +1,110 @@
+<ion-header style="position: fixed" collapse="condense">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" size="large">
+      Criar Evento
+    </ion-title>
+    <div class="ion-text-start">
+      <ion-button fill="clear" (click)="closeForm()"><ion-icon name="close" size="large"></ion-icon></ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-slides pager="true">
+    <ion-slide>
+      <div class="container">
+        <h1>Detalhes</h1>
+        <br>
+        <div class="user-info">
+          <ion-avatar class="pfp">
+            <ion-img src="../../assets/pfps/pfp_example_1.jpg"></ion-img>
+          </ion-avatar>
+          <div class="profile-container">
+            <h3 class="profile-name">Thomas Cintra</h3>
+            <p class="my-profile">Meu Perfíl</p>
+          </div>
+        </div>
+        <div class="form-container">
+          <form [formGroup]="details" (ngSubmit)="logForm()">
+            <ion-item lines="none">
+              <ion-label position="floating">Nome</ion-label>
+              <ion-input id="eventName" #eventName type="text" formControlName="name"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label position="floating">Local</ion-label>
+              <ion-input id="eventLocation" #eventLocation type="text" formControlName="location"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label position="floating">Data e Horário</ion-label>
+              <ion-datetime (ionChange)="updateTime()" id="eventTime" #eventTime displayFormat="D MMM YYYY, H:mm" formControlName="time"></ion-datetime>
+            </ion-item>
+            <ion-button expand="block" class="slide-action" [disabled]="!firstSlideValidation()" (click)="nextSlide()">Próximo</ion-button>
+          </form>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="container">
+        <h1>Privacidade</h1>
+        <p style="text-align: left">Escolha quem pode ver o seu evento.</p>
+        <br>
+        <div class="form-container">
+          <form [formGroup]="details" (ngSubmit)="logForm()">
+            <ion-list>
+              <ion-radio-group id="eventPrivacy" #eventPrivacy (ionChange)="updatePrivacy()" value="public" formControlName="privacy">
+                <ion-item lines="none">
+                  <ion-label>Público<br><span class="radio-description">Todos no Quinze</span></ion-label>
+                  <ion-note slot="start"><ion-icon name="globe-outline"></ion-icon></ion-note>
+                  <ion-radio value="public"></ion-radio>
+                </ion-item>
+                <ion-item lines="none">
+                  <ion-label>Amigos<br><span class="radio-description">Somente seus amigos</span></ion-label>
+                  <ion-note slot="start"><ion-icon name="people-outline"></ion-icon></ion-note>
+                  <ion-radio value="friends"></ion-radio>
+                </ion-item>
+                <ion-item lines="none">
+                  <ion-label>Privado<br><span class="radio-description">Somente convidados</span></ion-label>
+                  <ion-note slot="start"><ion-icon name="lock-closed-outline"></ion-icon></ion-note>
+                  <ion-radio value="private"></ion-radio>
+                </ion-item>
+                <ion-item lines="none">
+                  <ion-label>Pessoal<br><span class="radio-description">Somente você</span></ion-label>
+                  <ion-note slot="start"><ion-icon name="person-outline"></ion-icon></ion-note>
+                  <ion-radio value="onlyMe"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+            <ion-button expand="block" class="slide-action" [disabled]="!secondSlideValidation()" (click)="nextSlide()">Próximo</ion-button>
+          </form>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="container">
+        <div class="user-info">
+          <ion-avatar class="pfp">
+            <ion-img src="../../assets/pfps/pfp_example_1.jpg"></ion-img>
+          </ion-avatar>
+          <div class="profile-container">
+            <h3 class="profile-name">Thomas Cintra</h3>
+            <p class="my-profile">Meu Perfíl</p>
+          </div>
+        </div>
+        <div class="form-container">
+          <form [formGroup]="details" (ngSubmit)="logForm()">
+            <ion-input type="file" (ionChange)="updateImage($event)" formControlName="file" class="input-file" id="file-upload"></ion-input>
+            <div class="image-container">
+              <ion-img id="preview" [src]="url" (click)="uploadFile()"></ion-img>
+            </div>
+            <div class="event-details">
+              <p class="event-name">{{ eventName.value }}</p>
+              <p class="event-date">{{ time }}</p>
+              <p class="event-location">{{ eventLocation.value }}</p>
+              <p class="event-privacy">Este evento é visível para: <b>{{ privacy }}</b></p>
+            </div>
+            <ion-button type="submit" [disabled]="!thirdSlideValidation()" expand="block" class="slide-action">Post</ion-button>
+          </form>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

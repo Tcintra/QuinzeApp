@@ -24,3 +24,19 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-content{
+  --ion-background-color:#ffffff;
+}
+
+ion-tabs{
+  --ion-background-color:#ffffff;
+}
+
+ion-title{
+  color: black;
+}
+
+ion-title {
+  border-bottom: 1px solid grey;
+}

@@ -1,0 +1,42 @@
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  display: flex!important;
+  align-content: center!important;
+  align-items: center!important;
+}
+
+ion-item {
+  --background: white;
+  --color: black !important;
+}
+
+p {
+  color: black !important;
+}
+
+ion-icon {
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ion-item-sliding {
+  background: white;
+}
+
+ion-list-header {
+  --background: white;
+  --color: black;
+}
+
+ion-item-options {
+  background: #ff4961;
+  border: none !important;
+}
+
+.label-header {
+  font-size: 20px;
+  margin-top: 0;
+}

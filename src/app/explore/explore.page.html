@@ -1,0 +1,259 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+    <!-- Implement changeSearch() -->
+    <ion-segment value="events" (ionChange)="changeSearch($event)">
+      <ion-segment-button value="events">
+        <ion-label>Eventos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="accounts">
+        <ion-label>Contas</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-header>
+  <ion-grid>
+    <h4><b>Recomendados para você</b></h4>
+    <div class="events-container">
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <h4><b>Eventos de seus amigos</b></h4>
+    <div class="events-container">
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <h4><b>Eventos próximos a você</b></h4>
+    <div class="events-container">
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="event">
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="12" class="event-description">
+                  <ion-card-title>Dia Do Investidor</ion-card-title>
+                  <ion-card-subtitle>Seg, 24 Ago 2020</ion-card-subtitle>
+                  <p class="location">Rua Artur de Azevedo, 1217</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="rsvp-container">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>1.5k</b></span> seguidores</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>
