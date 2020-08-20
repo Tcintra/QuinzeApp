@@ -1,0 +1,75 @@
+ion-title {
+  font-size: 30px;
+  color: black;
+  background: white;
+  display: flex!important;
+  align-content: center!important;
+  align-items: center!important;
+}
+
+ion-buttons {
+  height: 62px !important;
+}
+
+ion-grid {
+ padding: 0;
+}
+
+ion-card {
+  box-shadow: none !important;
+}
+
+ion-segment-button {
+  --background-checked: transparent !important;
+  --indicator-color: transparent !important;
+  --indicator-box-shadow: none;
+}
+
+ion-label {
+  margin-bottom: 5px !important;
+  color: black !important;
+}
+
+ion-segment-button::part(indicator) {
+  border-bottom: black solid 2px;
+  width: 70%;
+  left: 15%;
+}
+
+ion-row {
+  color: black;
+}
+
+ion-avatar {
+  width: 48px;
+  height: 48px;
+}
+
+#about, #discussion {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+ion-list {
+  width: 100%;
+  background: white;
+}
+
+ion-item {
+  --background: white;
+  --color: black;
+  --padding-bottom: 10px;
+}
+
+ion-item::part(native) {
+  padding-left: 10px !important;
+}
+
+p {
+  color: black !important;
+}
+
+.event-image-container {
+  padding-top: 0 !important;
+}

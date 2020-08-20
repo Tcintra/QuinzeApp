@@ -1,0 +1,136 @@
+<ion-header style="position: fixed;" collapse="condense">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" size="large">
+      Quinze
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="closePage()"><ion-icon name="close"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear"><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="false">
+  <ion-grid style="margin-top: 62px">
+    <ion-row>
+      <ion-card class="event-card">
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="12" class="event-image-container">
+              <ion-img src="../../assets/eventImgs/event_image_1.jpg" class="event-image"></ion-img>
+              <div class="event-buttons">
+                <div class="event-actions">
+                  <ion-button fill="clear" class="event-action-button"><ion-icon name="heart" class="event-action-icon"></ion-icon></ion-button>
+                  <ion-label class="event-action-label">1342</ion-label>
+                </div>
+                <div class="event-actions">
+                  <ion-button fill="clear" class="event-action-button"><ion-icon name="chatbubbles" class="event-action-icon"></ion-icon></ion-button>
+                  <ion-label class="event-action-label">956</ion-label>
+                </div>
+                <div class="event-actions">
+                  <ion-button fill="clear" class="event-action-button"><ion-icon name="send" class="event-action-icon"></ion-icon></ion-button>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+          <div class="event-details">
+            <ion-row>
+              <ion-col size="8">
+                <ion-card-title color="black">Dia Do Investidor</ion-card-title>
+                <ion-card-subtitle>Segunda, 24 de Agosto 2020</ion-card-subtitle>
+                <p>Rua Artur de Azevedo, 1217</p>
+              </ion-col>
+              <ion-col size="4" class="countdown">
+                <ion-icon name="alarm-outline" size="large"></ion-icon>
+                <ion-row class="countdown-time">
+                  <ion-col size="4" class="countdown-elem">
+                    <p>01</p>
+                  </ion-col>
+                  <ion-col size="4" class="countdown-elem">
+                    <p>18</p>
+                  </ion-col>
+                  <ion-col size="4" class="countdown-elem">
+                    <p>22</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="countdown-time">
+                  <ion-col size="4" class="countdown-elem">
+                    <p class="countdown-label">Dias</p>
+                  </ion-col>
+                  <ion-col size="4" class="countdown-elem">
+                    <p class="countdown-label">Horas</p>
+                  </ion-col>
+                  <ion-col size="4" class="countdown-elem">
+                    <p class="countdown-label">Mins</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                <p><span><b>1.5k pessoas</b></span> seguindo este evento</p>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+    <ion-segment (ionChange)="segmentChanged($event)" value="about">
+      <ion-segment-button layout="icon-top" value="about">
+        <ion-icon size="large" name="information-circle-outline"></ion-icon>
+        <ion-label>Sobre</ion-label>
+      </ion-segment-button>
+      <ion-segment-button layout="icon-top" value="discussion">
+        <ion-icon size="large" name="people-circle-outline"></ion-icon>
+        <ion-label>Discussão</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-row id="about">
+      <h2>Detalhes</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum orci lorem, sed suscipit mauris finibus non. Vestibulum quis cursus lorem. Cras mi mi, porttitor vitae dolor eu, porttitor mattis metus. In tristique augue quis mi viverra imperdiet. Phasellus suscipit scelerisque sapien in fringilla. Praesent lobortis pulvinar libero a porta.</p>
+    </ion-row>
+    <ion-row id="discussion" style="display: none">
+      <h2>Comentários</h2>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <ion-img src="../../assets/pfps/pfp_example_2.jpeg"></ion-img>
+          </ion-avatar>
+          <ion-label class="ion-text-wrap">
+            <h2>João</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et orci vulputate, pulvinar tellus ac.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <ion-img src="../../assets/pfps/pfp_example_3.jpeg"></ion-img>
+          </ion-avatar>
+          <ion-label class="ion-text-wrap">
+            <h2>Maria</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <ion-img src="../../assets/pfps/pfp_example_5.jpeg"></ion-img>
+          </ion-avatar>
+          <ion-label class="ion-text-wrap">
+            <h2>Monica</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et orci vulputate, pulvinar tellus ac.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <ion-img src="../../assets/pfps/pfp_example_4.jpeg"></ion-img>
+          </ion-avatar>
+          <ion-label class="ion-text-wrap">
+            <h2>Gabriel</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>

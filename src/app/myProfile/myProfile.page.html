@@ -8,6 +8,180 @@
     </div>
   </ion-toolbar>
 </ion-header>
-<ion-content style="margin-top: 68px" [fullscreen]="false">
-
+<ion-content [fullscreen]="false">
+  <ion-grid style="margin-top: 68px" class="profile-info">
+    <ion-row>
+      <ion-col class="profile-img" size="4">
+        <ion-avatar><ion-img src="../../assets/pfps/pfp_example_1.jpg"></ion-img></ion-avatar>
+      </ion-col>
+      <ion-col size="8" class="profile-stats">
+        <ion-row>
+          <ion-col class="profile-stat" size="4">
+            <h6><b>2</b></h6>
+            <h6>Eventos</h6>
+          </ion-col>
+          <ion-col size="4" class="profile-stat">
+            <h6><b>152</b></h6>
+            <h6>Seguidores</h6>
+          </ion-col>
+          <ion-col size="4" class="profile-stat">
+            <h6><b>254</b></h6>
+            <h6>Seguindo</h6>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-button class="editar-perfil" size="small">Editar Perfíl</ion-button>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="bio">
+      <p>Biografía do perfíl de Thomas.</p>
+    </ion-row>
+    <ion-row>
+      <ion-segment (ionChange)="segmentChanged($event)" value="current">
+        <ion-segment-button layout="icon-top" value="current">
+          <ion-icon size="large" name="alarm-outline"></ion-icon>
+          <ion-label>Eventos Atuais</ion-label>
+        </ion-segment-button>
+        <ion-segment-button layout="icon-top" value="past">
+          <ion-icon size="large" name="archive-outline"></ion-icon>
+          <ion-label>Eventos Passados</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="events" id="current-events">
+    <ion-row>
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/birthday.jpg" class="event-image"></ion-img>
+                <div class="event-buttons">
+                  <div class="event-actions">
+                    <ion-button fill="clear" class="event-action-button"><ion-icon name="heart" class="event-action-icon"></ion-icon></ion-button>
+                    <ion-label class="event-action-label">176</ion-label>
+                  </div>
+                  <div class="event-actions">
+                    <ion-button fill="clear" class="event-action-button"><ion-icon name="chatbubbles" class="event-action-icon"></ion-icon></ion-button>
+                    <ion-label class="event-action-label">32</ion-label>
+                  </div>
+                  <div class="event-actions">
+                    <ion-button fill="clear" class="event-action-button"><ion-icon name="send" class="event-action-icon"></ion-icon></ion-button>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="8">
+                  <ion-card-title color="black">Meu Aniversário <ion-icon name="lock-closed" class="lock"></ion-icon></ion-card-title>
+                  <ion-card-subtitle>Terça, 01 de Setembro 2020</ion-card-subtitle>
+                  <p>Lá em casa</p>
+                </ion-col>
+                <ion-col size="4" class="countdown">
+                  <ion-icon name="alarm-outline" size="large"></ion-icon>
+                  <ion-row class="countdown-time">
+                    <ion-col size="4" class="countdown-elem">
+                      <p>7</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p>21</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p>05</p>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row class="countdown-time">
+                    <ion-col size="4" class="countdown-elem">
+                      <p class="countdown-label">Dias</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p class="countdown-label">Horas</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p class="countdown-label">Mins</p>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-button color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>56 pessoas</b></span> seguindo este evento</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+    </ion-row>
+    <br>
+  </ion-grid>
+  <ion-grid class="events" id="past-events" style="display: none">
+    <ion-row>
+        <ion-card class="event-card" button="true">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12" class="event-image-container">
+                <ion-img src="../../assets/eventImgs/event_image_2.png" class="event-image"></ion-img>
+                <div class="event-buttons">
+                  <div class="event-actions">
+                    <ion-button fill="clear" class="event-action-button"><ion-icon name="heart" class="event-action-icon"></ion-icon></ion-button>
+                    <ion-label class="event-action-label">21</ion-label>
+                  </div>
+                  <div class="event-actions">
+                    <ion-button fill="clear" class="event-action-button"><ion-icon name="chatbubbles" class="event-action-icon"></ion-icon></ion-button>
+                    <ion-label class="event-action-label">32</ion-label>
+                  </div>
+                  <div class="event-actions">
+                    <ion-button fill="clear" class="event-action-button"><ion-icon name="send" class="event-action-icon"></ion-icon></ion-button>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+            <div class="event-details">
+              <ion-row>
+                <ion-col size="8">
+                  <ion-card-title color="black">Esquenta pro Lolla <ion-icon name="lock-closed" class="lock"></ion-icon></ion-card-title>
+                  <ion-card-subtitle>Quarta, 24 de Março 2020</ion-card-subtitle>
+                  <p>Lá em casa</p>
+                </ion-col>
+                <ion-col size="4" class="countdown">
+                  <ion-icon name="alarm-outline" size="large"></ion-icon>
+                  <ion-row class="countdown-time">
+                    <ion-col size="4" class="countdown-elem">
+                      <p style="color: red">123</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p style="color: red">18</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p style="color: red">35</p>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row class="countdown-time">
+                    <ion-col size="4" class="countdown-elem">
+                      <p style="color: red" class="countdown-label">Dias</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p style="color: red" class="countdown-label">Horas</p>
+                    </ion-col>
+                    <ion-col size="4" class="countdown-elem">
+                      <p style="color: red" class="countdown-label">Mins</p>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-button disabled color="dark" class="rsvp-button">Seguir Evento</ion-button>
+                  <p><span><b>24 pessoas</b></span> seguiram este evento</p>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+        </ion-card>
+    </ion-row>
+    <br>
+  </ion-grid>
 </ion-content>

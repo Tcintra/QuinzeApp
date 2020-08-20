@@ -53,6 +53,8 @@ ion-segment-button {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
+  height: 120px;
+  overflow: scroll;
 }
 
 .rsvp-button {
@@ -78,7 +80,7 @@ ion-card, ion-card-header, ion-card-content {
 }
 
 ion-card-title {
-  font-size: 14px;
+  font-size: 16px !important;
   color: black;
 }
 

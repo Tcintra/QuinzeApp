@@ -10,3 +10,94 @@ ion-title {
   align-content: center!important;
   align-items: center!important;
 }
+
+.profile-img {
+  display: flex !important;
+  align-items: center;
+  justify-content: left;
+}
+
+.profile-info {
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.profile-name {
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+}
+
+.profile-stats {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 0 !important;
+}
+
+h6 {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+.profile-stat {
+  padding: 1%;
+}
+
+ion-avatar {
+  width: 100px;
+  height: 100px;
+}
+
+ion-row {
+  width: 100%;
+}
+
+.editar-perfil {
+  margin: 10px 0 0 0;
+  --border-radius: 3px !important;
+  --border-color: lightgrey !important;
+  --border-style: solid !important;
+  --border-width: 1px !important;
+  --color: black !important;
+  --background: transparent !important;
+  --background-activated: transparent !important;
+
+  width: 100%;
+}
+
+ion-segment-button {
+  --background-checked: transparent !important;
+  --indicator-color: transparent !important;
+  --indicator-box-shadow: none;
+}
+
+ion-label {
+  margin-bottom: 5px !important;
+}
+
+ion-segment-button::part(indicator) {
+  border-bottom: black solid 2px;
+  width: 70%;
+  left: 15%;
+}
+
+.event-image-container {
+  padding: 0;
+}
+
+ion-grid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+ion-card {
+  box-shadow: none !important;
+}

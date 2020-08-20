@@ -10,7 +10,7 @@ import {Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-postEvent',
   templateUrl: 'postEvent.page.html',
-  styleUrls: ['postEvent.page.scss', '../app.component.scss']
+  styleUrls: ['postEvent.page.scss']
 })
 export class PostEventPage {
   // Form instance vars
